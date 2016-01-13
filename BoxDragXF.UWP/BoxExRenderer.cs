@@ -1,5 +1,5 @@
 ﻿using BoxDragXF;
-using BoxDragXF.WinPhone;
+using BoxDragXF.UWP;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
 
 [assembly: ExportRenderer(typeof(BoxViewEx), typeof(BoxExRenderer))]
-namespace BoxDragXF.WinPhone
+namespace BoxDragXF.UWP
 {
     class BoxExRenderer : Xamarin.Forms.Platform.UWP.BoxViewRenderer
     {
@@ -26,5 +26,4 @@ namespace BoxDragXF.WinPhone
             el.OnManipulationDelta(el, new BoxDragXF.ManipulationDeltaRoutedEventArgs(el, e.Delta.Translation.X, e.Delta.Translation.Y));
         }
     }
-
 }
